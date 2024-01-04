@@ -1,0 +1,85 @@
+   var rows = 4;
+            var columns = 4;
+            var moves = 50;
+
+            // Initialize the puzzle
+            initializePuzzle();
+
+            function initializePuzzle() {
+                for (var j = 0; j < columns * rows; j++) {
+                    var imgblank = document.createElement("img");
+                    imgblank.src = "me/blank.jpg";
+                    imgblank.draggable = true;
+                    imgblank.id = "blank_" + (j + 1);
+
+                    document.getElementById('row' + Math.ceil((j + 1) / columns)).appendChild(imgblank);
+                    imgblank.addEventListener("dragstart", drag);
+                }
+
+                for (var i = 0; i < columns * rows; i++) {
+                    var gameblank = document.createElement("img");
+                    gameblank.src = "me/" + (i + 1) + ".jpg";
+                    gameblank.draggable = true;
+                    gameblank.id = "img_" + (i + 1);
+
+                    document.getElementById('slicesRow' + Math.ceil((i + 1) / columns)).appendChild(gameblank);
+                    gameblank.addEventListener("dragstart", drag);
+                }
+
+                updateMoves();
+            }
+
+            function drag(event) {
+                event.dataTransfer.setData("text/plain", event.target.id);
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                var data = event.dataTransfer.getData("text/plain");
+                var draggedElement = document.getElementById(data);
+                var targetElement = event.target;
+
+                // Check if the dropped element is a valid target
+                if (targetElement.classList.contains("col-3") && targetElement.children.length === 0) {
+                    // Swap the source and destination image sources
+                    var tempSrc = draggedElement.src;
+                    draggedElement.src = "me/blank.jpg";
+                    targetElement.appendChild(draggedElement);
+                    moves--;
+
+                    // Update moves and check for a win
+                    updateMoves();
+                    checkForWin();
+                }
+            }
+
+            function allowDrop(event) {
+                event.preventDefault();
+            }
+
+            function updateMoves() {
+                document.getElementById("remainingMoves").textContent = moves;
+            }
+
+            function checkForWin() {
+                var win = true;
+
+                for (var i = 1; i <= columns * rows; i++) {
+                    var imgElement = document.getElementById("img_" + i);
+                    var blankElement = document.getElementById("blank_" + i);
+
+                    // If any image is not in the correct position, the game is not won
+                    if (imgElement.parentNode.id !== blankElement.parentNode.id) {
+                        win = false;
+                        break;
+                    }
+                }
+
+                if (win) {
+                    alert("Congratulations! You solved the puzzle!");
+                }
+            }
+
+            var container = document.getElementById("game");
+            container.addEventListener("drop", drop);
+            container.addEventListener("dragover", allowDrop);

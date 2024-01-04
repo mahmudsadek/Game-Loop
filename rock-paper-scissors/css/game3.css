@@ -1,0 +1,146 @@
+body {
+  font-family: "Rubik Bubbles", "Segoe UI", Tahoma, "Geneva", Verdana;
+}
+footer{
+  background-color:rgba(238, 164, 127, 0.823);
+  box-shadow: 5px 5px 30px black;
+  border-radius: 20px;
+}
+main {
+  height: 1200px;
+  background-color:rgba(17, 102, 176, 0.664);
+  box-shadow: 20px 20px 10px lightblue;
+  border-radius: 20px;
+}
+#gameRow i {
+  font-size: 13rem;
+  color: rgba(255, 255, 255, 0.893);
+  text-shadow: 0.5rem 0.5rem 2rem rgb(8, 7, 17);
+}
+#userPlaceCol i {
+  rotate: 90deg;
+  transition: 0.5s;
+}
+#machinePlaceCol i {
+  transform: rotate(270deg) rotateY(180deg);
+  transition: 0.5s;
+}
+#machinePlaceCol i[class*="scissors"] {
+  transform: rotate(0deg) rotateY(360deg);
+}
+#chooseRow i {
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.893);
+  text-shadow: 0.25rem 0.25rem 1rem rgb(8, 7, 17);
+  transition: 1s;
+  rotate: 90deg;
+}
+#chooseRow #scissors {
+  transform: rotate(90deg) rotateX(180deg);
+}
+#userPlaceCol .fa-hand-scissors {
+  transform: rotate(90deg) rotateX(180deg);
+}
+#machinePlace.fa-hand-scissors {
+  transform: rotate(360deg);
+}
+#chooseRow i:hover {
+  color: rgba(102, 240, 102, 0.738);
+  transform: scale(1.3);
+  cursor: pointer;
+}
+#chooseRow #scissors:hover {
+  color: rgba(102, 240, 102, 0.738);
+  scale: 1.3;
+  cursor: pointer;
+}
+#chooseRow i.active {
+  color: rgba(102, 240, 102, 0.738);
+  transform: scale(1.3);
+  cursor: pointer;
+}
+#chooseRow section {
+  padding: 10rem;
+}
+
+#chooseRow section {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+/* ========================================== */
+
+/* shake animation */
+/* --------------- */
+
+@keyframes leftShake {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+
+@keyframes rightShake {
+  0% {
+    transform: rotate(270deg) rotateY(180deg) translateX(0);
+  }
+  100% {
+    transform: rotate(270deg) rotateY(180deg) translateX(50px);
+  }
+}
+
+/* ------------------------------- */
+/* defining animation classes */
+.leftShakeAnimation {
+  color: rgba(102, 240, 102, 0.738);
+  transform: scale(1.1);
+  transform: translateY(5px);
+  cursor: pointer;
+  animation-name: leftShake;
+  animation-duration: 0.5s;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+}
+.rightShakeAnimation {
+  color: rgba(102, 240, 102, 0.738);
+  transform: scale(1.1);
+  cursor: pointer;
+  animation-name: rightShake;
+  animation-duration: 0.5s;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+}
+/* ------------------------------- */
+
+/* =========================================== */
+@media screen and (max-width: 1200px) {
+  main {
+    height: 1300px;
+  }
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  main {
+    height: 1300px;
+  }
+
+  #gameRow i {
+    padding: 10px;
+  }
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 750px) {
+  main {
+    height: 1100px;
+  }
+  html {
+    font-size: 8px;
+  }
+}

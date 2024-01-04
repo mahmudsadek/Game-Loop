@@ -1,0 +1,227 @@
+body {
+   margin: 0;
+   padding: 0;
+   /* background-color: #004268;
+   background-image: linear-gradient(160deg, #003452 0%, #00584e 100%);
+ */  
+}
+.container-fluid {
+   padding: 0;
+}
+
+#game-desc {
+   font-size: 1rem;
+}
+
+.nav-link {
+   font-size: 1.2rem;
+   font-weight: 600;
+   color: #0d0829;
+}
+
+#wrapper {
+   margin-top: 100px;
+   border-radius: 16px;
+   /* background-color: #EEE; */
+   height: 410px;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+
+#game-info {
+   color: #FFF;
+   text-shadow: 1px 1px 2px #0d0829;
+   font-weight: 500;
+   border-radius: 16px 0px 0px 16px;
+   height: 100%;
+   background-image: url('../assit/1.jpg');
+   background-size: cover;
+   transition: background-image 1s;
+
+}
+
+#game-slide {
+   border-radius: 0px 16px 16px 0px;
+   height: 100%;
+   background-color: #454361
+}
+
+.img-ico {
+   width: 50px;
+   margin-right: 15px;
+}
+
+.game-btn {
+   color: #FFF;
+   align-items: center;
+   font-weight: 700;
+   padding: 16px 15px;
+   background-color: #292444;
+   border-radius: 16px;
+   margin: 16px 0px;
+   transition: 1s;
+}
+
+.game-btn:hover {
+   background-color: #0d0829;
+}
+
+.button-49,
+.button-49:after {
+   width: 150px;
+   height: 50px;
+   line-height: 50px;
+   font-size: 20px;
+   font-family: 'Bebas Neue', sans-serif;
+   background: linear-gradient(45deg, transparent 5%, #4903b9 5%);
+   border: 0;
+   color: #fff;
+   letter-spacing: 3px;
+   box-shadow: 6px 0px 0px #00E6F6;
+   outline: transparent;
+   position: relative;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+}
+
+.button-49:after {
+   --slice-0: inset(50% 50% 50% 50%);
+   --slice-1: inset(80% -6px 0 0);
+   --slice-2: inset(50% -6px 30% 0);
+   --slice-3: inset(10% -6px 85% 0);
+   --slice-4: inset(40% -6px 43% 0);
+   --slice-5: inset(80% -6px 5% 0);
+
+   content: 'ALTERNATE TEXT';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #870a92 5%);
+   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+   clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+   animation: 1s glitch;
+   animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+   0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+   }
+
+   10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+   }
+
+   20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+   }
+
+   30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+   }
+
+   40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+   }
+
+   50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+   }
+
+   60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+   }
+
+   70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+   }
+
+   80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+   }
+
+   90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+   }
+
+   100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+   }
+}
+
+.change-bg-img {
+   background-color: #292444;
+   /* width: 2px  ; */
+   height: 12px;
+   border-radius: 50%;
+   border-style: none;
+   margin: 2px;
+}
+
+.game-card {
+   margin-bottom: 25px;
+   transition: 1s;
+}
+
+.game-card:hover img {
+   transform: scale(1.1);
+}
+
+.img-container {
+   overflow: hidden;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+   width: 90%;
+   border-radius: 24px 24px 0px 0px;
+   background-color: #0d0829;
+   margin: auto;
+   transition: 1s;
+}
+
+.game-img-m {
+   width: 100%;
+   border-radius: 26px 26px 0px 0px;
+   /* margin-top: 8px; */
+   transition: 1s;
+}
+
+.game-card-foot {
+   color: #FFF;
+   width: 90%;
+   background-color: #0d0829;
+   padding-bottom: 15px;
+   padding-top: 5px;
+   border-radius: 0px 0px 24px 24px;
+   margin: auto;
+   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+@media only screen and (max-width: 991px) {
+   html {
+      font-size: 13px;
+   }
+   #game-info {
+      border-radius: 16px;
+   }
+   /* .game-card:hover {
+      width: 89%;
+      margin-bottom: 15px;
+   } */
+}

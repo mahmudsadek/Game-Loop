@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div id="all" class="container-fluid  ">
+        <div id="fRow" class="row d-flex  justify-content-around ">
+
+            <div id="move" class="col-2 mt-2 justify-content-between  ">
+                <p> Remaining Moves </p>
+                <p>30</p>
+            </div>
+            
+            <div id="real" class="col-2 mt-2 m-0 p-0 rounded-2  text-center w-50 d-lg-none   ">
+                <img draggable="false" src="me/treka.jpg" class="w-100 ">
+
+            </div>
+         
+
+            <div id="game" class="  col-lg-6  mt-2   bg-primary ">
+                <div class="row  h-25 ">
+                    <div class="col-3 h-100 frame ">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+
+                </div>
+
+                <div class="row h-25 ">
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                </div>
+
+                <div class="row h-25 ">
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                </div>
+
+                <div class="row h-25">
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                    <div class="col-3 h-100 frame">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="real" class="col-2 mt-2 m-0 p-0 rounded-2  text-center first  ">
+                <img draggable="false" src="me/treka.jpg" class="w-100 ">
+
+                <button id="btn" class="mt-5 btn  btn-primary w-75 h-25  ">Finish</button>
+            </div>
+
+            <div id="slices" class="mt-1 bg-primary   ">
+                <div class="row h-50">
+                    <div class="col-6 h-100">
+                        <div id="row1" class="row h-100 ">
+                            <div class="col-3 h-100 slicesImg item  ">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                        </div>
+                        <div id="row2" class="row h-100 ">
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item ">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 h-100">
+                        <div id="row3" class="row h-100 ">
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                        </div>
+                        <div id="row4" class="row h-100 ">
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                            <div class="col-3 h-100 slicesImg item">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row h-50">
+
+                </div>
+            </div>
+
+            <button id="btn2" class="mt-5 btn  btn-primary w-50 h-25 d-lg-none  ">Finish</button>
+
+        </div>
+        <div class="sounds">
+            <audio id="bubble" src="bubble-min.wav"></audio>
+            <audio id="win" src="ايه الحلاه ديه (mp3cut.net).mp3"></audio>
+            <audio id="lose" src="فول الصين العظيم 👨‍🌾 يا جدع.mp3"></audio>
+
+
+        </div>
+
+        <div>
+
+        </div>
+
+
+        <div id="loser" class="model-container lose d-none">
+            <div class="pop-upLose">
+                <img id="wrong" src="loser.png" alt="">
+                <button class="close-loser">Play Agein</button>
+            </div>
+        </div>
+
+        <div id="winner" class="model-container win d-none">
+            <div class="pop-upWin">
+                <img id="done" src="winner.png" alt="">
+                <button class="close-winner">Play Again</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="script.js">
+
+        </script>
+</body>
+
+</html>

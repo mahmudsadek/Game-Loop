@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- making a web page icon -->
+    <link rel="icon" type="image/x-icon" href="images/game icon.png" />
+    <!-- =================================================== -->
+
+    <!-- calling web fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap"
+      rel="stylesheet"
+    />
+    <!--===============================================================-->
+
+    <!-- calling fontawesome library -->
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- =================================== -->
+
+    <!-- calling bootstrap stylesheet library -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" />
+    <!-- ============================================================== -->
+
+    <!-- calling my style file -->
+    <link rel="stylesheet" href="css/game3.css" />
+    <!-- ================================= -->
+
+    <title>Rock Paper Scissors Game</title>
+  </head>
+  <body>
+  
+    <main class="container mt-4 p-5">
+      <header class="row text-center p-3">
+        <section class="col-lg-12">
+          <h1>Welcome to Stone , Paper and Scissors Game !</h1>
+        </section>
+      </header>
+
+      <section id="gameRow" class="row text-center p-5">
+        <section id="userPlaceCol" class="col-lg-6">
+          <i id="userPlace" class="fa-solid fa-hand-back-fist shadow"></i>
+        </section>
+
+        <section id="machinePlaceCol" class="col-lg-6">
+          <i id="machinePlace" class="fa-solid fa-hand-back-fist"></i>
+        </section>
+      </section>
+
+      <section id="resultRow" class="row text-center p-4">
+        <section class="col-lg-12">
+          <h2 id="resultStatment">Make your choice !</h2>
+        </section>
+      </section>
+
+      <section id="chooseRow" class="row text-center p-5">
+        <section
+          class="col-xl-4 py-5 d-flex align-items-center justify-content-center"
+        >
+          <i id="fist" class="fa-solid fa-hand-back-fist optionImages"></i>
+        </section>
+
+        <section
+          class="col-xl-4 py-5 d-flex align-items-center justify-content-center"
+        >
+          <i id="hand" class="fa-solid fa-hand optionImages"></i>
+        </section>
+
+        <section
+          class="col-xl-4 py-5 d-flex align-items-center justify-content-center"
+        >
+          <i id="scissors" class="fa-solid fa-hand-scissors optionImages"></i>
+        </section>
+      </section>
+          <div class="row justify-content-center">
+        <footer class="row container py-5 text-center ">
+          <section class="col-xl-6 py-5 text-center">
+            <h2>User</h2>
+            <h3 id="userScore">0</h3>
+          </section>
+          <section class="col-xl-6 py-5 text-center">
+            <h2>Machine</h2>
+            <h3 id="machineScore" class="">0</h3>
+          </section>
+      </footer>
+      </div>
+      <section class="audios">
+        <audio id="winSound" src="audios/goodresult-82807.mp3"></audio>
+        <audio id="loseSound" src="audios/game-over-arcade-6435.mp3"></audio>
+        <audio
+          id="waitSound"
+          src="audios/drum-roll-please-6386-[AudioTrimmer (mp3cut.net).mp3"
+        ></audio>
+      </section>
+    </main>
+
+    <!--=================================================================-->
+    <!-- Note : If the defer attribute is set, it specifies that the script is downloaded in parallel to parsing the page,
+         and executed after the page has finished parsing. -->
+
+    <!-- calling bootstrap javascript library -->
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.js" defer></script>
+    <!-- ========================================================= -->
+
+    <!-- calling my javascript file -->
+    <script src="script/game3.js" defer></script>
+    <!-- ============================= -->
+  </body>
+</html>-
