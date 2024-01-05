@@ -228,8 +228,6 @@ const checkCollisions = () => {
             document.querySelector("#score").textContent += timing;
             document.querySelector("#highest").textContent += (localStorage.getItem("highestScore"));
             clearAllIntervals();
-            play.style.display = "block";
-            play.textContent = "Play Again";
             }
 
         }
