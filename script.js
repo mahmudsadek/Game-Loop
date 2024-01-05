@@ -5,7 +5,7 @@ var btnPlay = document.querySelector('.button-49');
 var gameTitle = document.querySelector('#game-title');
 var gameDesc = document.querySelector('#game-desc');
 
-var imgsSrc = ['assit/1.jpg', 'assit/2.jpg', 'assit/3.jpg', 'assit/4.jpg']
+var imgsSrc = ['assit/1.jpg', 'assit/2.jpg', 'assit/poster.jpg', 'assit/4.jpg']
 var gamesDescription = ["Unleash your inner warrior in this adrenaline-pumping fight game! Engage in heart-pounding one-on-one battles, execute powerful combos, and rise through the ranks to become the ultimate champion.",
    "Dive into a world of brain-teasing challenges with our captivating puzzle game! Immerse yourself in a medley of mind-bending puzzles, from clever brainteasers to visually stunning challenges.",
    "Experience the timeless thrill of decision-making with our Rock, Paper, Scissors game! Simple yet addictive, challenge friends or test your luck against the computer in this classic showdown of rock, paper, and scissors.",
@@ -93,7 +93,7 @@ btnClickChangeImg[1].addEventListener('click', (e) => {
    i = 1;
 })
 btnClickChangeImg[2].addEventListener('click', (e) => {
-   gameCover.style.backgroundImage = 'url(assit/3.jpg)';
+   gameCover.style.backgroundImage = 'url(assit/poster.jpg)';
    btnPlay.onclick = function (e) {
       location.href = gamesLocation[2]
    }
