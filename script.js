@@ -56,7 +56,7 @@ gameHover[1].addEventListener('mouseover', (e) => {
    i = 1;
 })
 gameHover[2].addEventListener('mouseover', (e) => {
-   gameCover.style.backgroundImage = 'url(assit/3.jpg)';
+   gameCover.style.backgroundImage = 'url(assit/poster.jpg)';
    btnPlay.onclick = function (e) {
       location.href = gamesLocation[2]
    }
